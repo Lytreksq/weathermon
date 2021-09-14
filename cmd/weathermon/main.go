@@ -19,8 +19,8 @@ type Response struct {
 var sqliteDatabase *storage.Storage
 
 func main() {
-
-	sqliteDatabase, err := storage.NewStorage("/home/dima/mybase.db")
+	var err error
+	sqliteDatabase, err = storage.NewStorage("/home/dima/mybase.db")
 	if err != nil {
 		log.Fatalln(err)
 	}

@@ -28,7 +28,7 @@ func NewStorage(filepath string) (storage *Storage, err error) {
 		return nil, err
 	}
 	var result Storage
-	result.db = &db
+	result.db = db
 	err = result.createTable()
 	if err != nil {
 		return nil, err
